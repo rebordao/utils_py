@@ -1,9 +1,8 @@
-"""
-Utils Class.
-"""
 from typing import List
 import logging
 import sys
+import fastavro
+import pandas as pd
 
 
 class Utils:
@@ -33,7 +32,7 @@ class Utils:
         return
 
     @staticmethod
-    def do_batches(alist, batch_size):
+    def do_batches(alist: List, batch_size: int) -> List:
         """
         Returns a list of lists where each sublist has size batch_size.
         This is handy for multi GET and multi POST API requests.
@@ -47,3 +46,13 @@ class Utils:
                 yield alist[i:i + batch_size]
             else:
                 yield alist[i:len(alist)]
+
+    @staticmethod
+    def read_avro(filepath: str, encoding='rb') -> pd.DataFrame:
+        """
+        Reads an avro file and returns its contents.
+        """
+        with open(filepath, encoding) as fp:
+            reader = fastavro.reader(fp)
+            records = [r for r in reader]
+        return pd.DataFrame.from_records(records)
