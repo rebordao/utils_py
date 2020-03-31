@@ -29,13 +29,9 @@ pip install --upgrade git+https://github.com/rebordao/utils_py@master
 
 ## Development Guidelines
 
-It's important to favour modular code and that each class 
-has [_high cohesion_](https://stackoverflow.com/questions/10830135/what-is-high-cohesion-and-how-to-use-it-make-it), e.g. that it does 
-not try to do too many things.
-
-### Testing
-
-When possible classes and methods should have unit tests.
+1. Favour modular code.
+1. Classes with [_high cohesion_](https://stackoverflow.com/questions/10830135/what-is-high-cohesion-and-how-to-use-it-make-it).
+1. When possible classes and methods should have unit tests.
 
 #### Test Coverage
 
