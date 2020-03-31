@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="utils_py",
-    version="0.0.3",
+    version="0.0.4",
     description="A set of utilities in Python",
     author="Antonio Rebordao",
     author_email="antonio@rebordao.net",
