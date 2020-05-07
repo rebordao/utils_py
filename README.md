@@ -29,15 +29,7 @@ pip install --upgrade git+https://github.com/rebordao/utils_py@master
 
 ## Development Guidelines
 
-1. Favour modular code.
-1. Classes with [_high cohesion_](https://stackoverflow.com/questions/10830135/what-is-high-cohesion-and-how-to-use-it-make-it).
-1. When possible classes and methods should have unit tests.
+1. Do modular code.
+1. Use classes with [_high cohesion_](https://stackoverflow.com/questions/10830135/what-is-high-cohesion-and-how-to-use-it-make-it).
+1. Do unit tests when possible.
 
-#### Test Coverage
-
-You can run the following command (from root folder) to get the test 
-coverage report written to the `htmlcov` folder:
-
-```
-PYTHONPATH=. py.test --cov-report html --cov=utils_py tests/ --verbose
-```
